@@ -1,0 +1,190 @@
+page {
+  background: #f0f0f0;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.layout-search {
+  height: 96rpx;
+  display: flex;
+  background: #080;
+  justify-content: center;
+}
+
+.input-search {
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  background: #070;
+  font-size: 0.8rem;
+}
+
+.teacher-list {
+  flex-direction: row;
+}
+
+.filter-layout {
+  display: flex;
+  font-size: 0.8rem;
+  height: 80rpx;
+}
+
+.filter-layout .menu .picker {
+  padding: 10rpx;
+  padding-left: 32rpx;
+  padding-right: 20rpx;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.filter-layout .menu .image {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 10rpx;
+}
+
+.filter-layout .menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  background: red;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.row-title {
+  flex: 1;
+  height: 72rpx;
+  justify-content: center;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: row;
+  background: white;
+  border-left: 20rpx solid white;
+  border-right: 20rpx solid white;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+.row-title .left {
+  flex: 7;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row-title .left .name {
+  margin-left: 20rpx;
+}
+
+.row-title .right {
+  flex: 3;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #f00;
+}
+
+.row-content {
+  flex: 1;
+  flex-direction: row;
+  height: 220rpx;
+  justify-content: flex-center;
+  background: white;
+  border-left: 20rpx solid white;
+  border-right: 20rpx solid white;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.row-content .icon {
+  height: 128rpx;
+  width: 128rpx;
+  margin-top: 46rpx;
+  margin-left: 20rpx;
+  border: 2rpx solid #dbdbdb;
+  border-radius: 50%;
+}
+
+.row-content .right {
+  font-size: 0.8rem;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  text-align: align;
+  vertical-align: bottom;
+  margin-left: 32rpx;
+}
+
+.row-content .right .line1 {
+  flex: 1;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .right .line2 {
+  flex: 1;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .right .descptions {
+  flex: 1;
+  color: #070;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 320rpx;
+  background: red;
+}
+
+.slide-image {
+  width: 100%;
+  overflow: show;
+}
+
+.bottom-hint {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+}
+.bottom-hint .line {
+  height: 2rpx;
+  width: 100rpx;
+  margin: 20rpx;
+  background: gray;
+}
+
+.bottom-hint .text {
+  color: #a4a4a4;
+}

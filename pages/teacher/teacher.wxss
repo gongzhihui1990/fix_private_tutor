@@ -1,0 +1,265 @@
+page {
+  background: #f0f0f0;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.layout-search {
+  height: 96rpx;
+  display: flex;
+  background: #080;
+  justify-content: center;
+}
+
+.input-search {
+  color: white;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  background: #070;
+  font-size: 0.8rem;
+}
+
+.teacher-list {
+  flex-direction: row;
+}
+
+.filter-layout {
+  display: flex;
+  font-size: 0.8rem;
+  height: 80rpx;
+}
+
+.filter-layout .menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  background: red;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.row-title {
+  flex: 1;
+  height: 72rpx;
+  justify-content: center;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: row;
+  background: white;
+  border-left: 20rpx solid white;
+  border-right: 20rpx solid white;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+.row-title .left {
+  flex: 7;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row-title .title-text {
+  font-weight: bold;
+  flex: 1;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-left: 10rpx;
+  border-left: 5rpx solid #070;
+}
+
+.row-title .text {
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row-title .left .name {
+  margin-left: 20rpx;
+}
+
+.row-title .right {
+  flex: 3;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #f00;
+}
+
+.row-content {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-center;
+  background: white;
+  border-left: 20rpx solid white;
+  border-right: 20rpx solid white;
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.row-content .icon {
+  height: 128rpx;
+  width: 128rpx;
+  margin-top: 46rpx;
+  margin-left: 20rpx;
+  border: 2rpx solid #dbdbdb;
+  border-radius: 50%;
+}
+
+.row-content .row {
+  font-size: 0.8rem;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  text-align: align;
+  vertical-align: bottom;
+  margin-left: 10rpx;
+}
+
+.row-content .row .time-text {
+  color: #070;
+  flex: 1;
+  align-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .row .text {
+  align-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .right {
+  font-size: 0.8rem;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  text-align: align;
+  vertical-align: bottom;
+  margin-left: 32rpx;
+}
+
+.row-content .right .line1 {
+  flex: 1;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .right .line2 {
+  flex: 1;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.row-content .right .descptions {
+  flex: 1;
+  color: #070;
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 320rpx;
+  background: red;
+}
+
+.slide-image {
+  width: 100%;
+  overflow: show;
+}
+
+.bottom_container {
+  align-items: center;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  background: #fff;
+  height: 112rpx;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  flex: 1;
+}
+
+.bottom_container .item {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  display: flex;
+}
+
+.share-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  align-self: center;
+  position: fixed;
+  bottom: 156rpx;
+  right: 0rpx;
+  width: 112rpx;
+  height: 112rpx;
+  margin-right: 18rpx;
+  background: #070;
+  z-index: 1000;
+  border-radius: 50%;
+  padding-top: 8rpx;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .share-layout {
+    justify-content: center;
+
+  position: fixed;
+  bottom: 200rpx;
+  right: 0rpx;
+  width: 126rpx;
+  height: 126rpx;
+  border-radius: 50%;
+  margin-right: 18rpx;
+  text-align: center;
+  align-self: center;
+  background: #070;
+  z-index: 1000;
+} */
+
+.share-layout-text {
+  color: white;
+  font-size: 0.6rem;
+ }

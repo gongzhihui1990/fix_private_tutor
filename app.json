@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/teacher/teacher",
+    "pages/mine/mine",
+    "pages/collection/teacher",
+    "pages/detial/detial",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008800",
+    "navigationBarTitleText": "斧子家教",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#007700",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "/images/home_b.png",
+        "selectedIconPath": "images/home_a.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/mine_b.png",
+        "selectedIconPath": "images/mine_a.png"
+      }
+    ]
+  }
+}

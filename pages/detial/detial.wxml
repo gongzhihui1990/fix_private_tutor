@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-x='true' scroll-y='true'>
+    <image bindload='bindloadImage' class="image" src="{{imageUrl}}" mode="aspectFit" style="width:{{ scaleWidth }}px; height:{{ scaleHeight }}px"></image>
+  </scroll-view>
+
+  <view class='control'>
+    <view class='text' bindtap='bindBigger'>+</view>
+    <view class='text' bindtap='bindSmaller'>-</view>
+  </view>
+
+</view>

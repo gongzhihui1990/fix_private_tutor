@@ -1,0 +1,98 @@
+<view class='head-container'>
+  <scroll-view scroll-y='true'>
+
+    <swiper catchtap="onSwiperItemClick" style='height:{{Height}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{item.imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" bindload='imgHeight' data-item='{{item}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="filter-layout">
+      <view class='menu' style='color:green'>温馨提示：预约试客时长默认为两小时/次 </view>
+
+    </view>
+    <view bindtap='onTeacherItemClick' data-item="{{item}}">
+      <view class='row-title'>
+        <view class='left'>
+          <image style="margin-left 2px;width: 20px; height: 20px;" src='/images/super.png'></image>
+
+          <view class='name'>{{item.name}}</view>
+          <view class='name'>(No:{{item.no}})</view>
+          <view class='name'>{{item.sex == 1 ? "男":"女"}}</view>
+
+        </view>
+        <view class='right'> ¥{{item.price}}/小时</view>
+      </view>
+      <view class='row-content' style='padding-top:20rpx;padding-bottom:20rpx;'>
+        <text class='row'>授课科目：{{item.types}}</text>
+        <text class='row'>授课区域：句容</text>
+        <text class='row'>授课年级：高中</text>
+        <text class='row'>教学心得：{{item.word}}</text>
+        <text class='row'>上课时间：周六／周日 8：00 - 17：00</text>
+      </view>
+    </view>
+    <view class='row-title'>
+      <text class='title-text'>基本信息</text>
+    </view>
+    <view class='row-content' style='padding-top:20rpx;padding-bottom:20rpx;'>
+      <text class='row'>教龄：{{item.teaching_age}}年</text>
+      <text class='row'>状态：{{item.work_state}}</text>
+      <text class='row'>籍贯：{{item.native_place}}</text>
+    </view>
+    <view class='row-title'>
+      <text class='title-text'>教学特点</text>
+      <text class='text' style='color:#007700;'>{{item.descptions}}</text>
+
+    </view>
+
+    <view class='row-title'>
+      <text class='title-text'>教学经历</text>
+    </view>
+
+    <block wx:for="{{item.exp}}" wx:key="{{item.date}}">
+      <view class='row-content' style='margin-bottom:0rpx;padding-top:10rpx;'>
+        <view class='row'>
+          <text class='time-text'> {{item.date}}</text>
+        </view>
+        <view class='row-content.row'>
+          <text class='text'>{{item.desc}}</text>
+        </view>
+      </view>
+    </block>
+
+    <view class='row-title'>
+      <text class='title-text'>个人介绍</text>
+    </view>
+    <view class='row-content' style='padding-top:20rpx;padding-bottom:20rpx;'>
+      <text class='row'>{{item.self_descptions}}</text>
+    </view>
+    <view style='height:180rpx;'></view>
+  </scroll-view>
+
+  <view class='bottom_container'>
+    <view class='item' style='background:white;color:#007700;flex: 2;'>
+      <image src='/images/call.png' style='width:48rpx;height:48rpx;'></image>
+      <view style='margin-left:10rpx;'>客服</view>
+    </view>
+    <view style='width:1px;height:100rpx;;background:gray;'>
+    </view>
+    <view class='item' style='background:white;color:#ff0000;flex: 2;'>
+      <image src='/images/star_a.png' style='width:48rpx;height:48rpx;'></image>
+      <view style='margin-left:10rpx;'>收藏</view>
+    </view>
+
+    <button class='share-layout' open-type="share">
+      <image src='/images/share.png' style='margin: 0rpx;width:40rpx;height:40rpx;'></image>
+      <view class='share-layout-text'>分享</view>
+    </button>
+    <!-- <view class='share-layout' open-type="share">
+      <image src='/images/share.png' style='margin: 0rpx;width:32rpx;height:32rpx;background: blue;'></image>
+      <view class='share-layout-text'>分享</view>
+    </view> -->
+    <view class='item' style='background:rgb(212, 209, 15);color:white;flex: 3;'>预约课程</view>
+    <view class='item' style='background:#007700;flex: 3;'>立即购买</view>
+
+  </view>
+
+</view>

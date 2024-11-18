@@ -1,0 +1,71 @@
+<view class='head-container'>
+  <scroll-view scroll-y='true'>
+    <view class='layout-search'>
+      <text class='input-search'>搜索老师姓名/编号/科目/年级/授课区域</text>
+    </view>
+    <swiper catchtap="onSwiperItemClick" style='height:{{Height}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" bindload='imgHeight' data-item='{{item}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="filter-layout">
+      <view class='menu'>
+        <picker class='picker' bindchange="bindPickerChange" value="{{index_1}}" range="{{array_1}}" range-key='name'>时薪高低</picker>
+        <image class='image' src='/images/select_black.png'></image>
+      </view>
+      <view style='justify-content: center;align-items: center;display: flex;'>|</view>
+      <view class='menu'>
+        <picker class='picker' bindchange="bindPickerChange" value="{{index_2}}" range="{{array_2}}" range-key='name'>授课区域</picker>
+        <image class='image' src='/images/select_black.png'></image>
+      </view>
+      <view style='justify-content: center;align-items: center;display: flex;'>|</view>
+      <view class='menu'>
+           <picker class='picker' mode='multiSelector' value="{{index_3}}" range='{{array_3}}' bindchange='bindPickerChange'>筛选</picker>
+        <image class='image' src='/images/select_black.png'></image>
+      </view>
+    </view>
+    <view class="teacher-list">
+      <block wx:for="{{TeacherList}}" wx:key="{{item.no}}" data-item="{{item}}">
+        <view bindtap='onTeacherItemClick' data-item="{{item}}">
+          <view class='row-title'>
+            <view class='left'>
+              <image style="margin-left 2px;width: 20px; height: 20px;" src='/images/super.png'></image>
+
+              <view class='name'>{{item.name}}</view>
+              <view class='name'>(No:{{item.no}})</view>
+              <view class='name'>{{item.sex == 1 ? "男":"女"}}</view>
+
+            </view>
+            <view class='right' data-item="{{item}}"> ¥{{item.price}}/小时</view>
+          </view>
+          <view class='row-content'>
+            <image class='icon' src="{{item.sex == 1 ? 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536220105968&di=fe8e2edf91e59d6e54fcbc3a65fd9aaf&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D37ab88eb14178a82da3177e39e6a19f8%2Fb8014a90f603738d1cfa7e05b91bb051f819ec61.jpg':'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536220086034&di=f1ee2a9b88207a95dd1365364ad547df&imgtype=0&src=http%3A%2F%2Fimg1.touxiang.cn%2Fuploads%2F20130601%2F01-020754_493.jpg'}}"></image>
+
+            <view class='right' style='padding:32rpx;'>
+              <view class='line1'>
+                <view style='color:black;'>{{item.school}}</view>
+                <view style='color:white;background:#ff0000;margin-left:32rpx;padding-left:32rpx;padding-right:32rpx;  border: 4rpx solid #F08080;'>{{item.title}}</view>
+
+              </view>
+              <view class='line2'> {{item.types}}</view>
+              <view class='descptions'> {{item.descptions}}</view>
+
+            </view>
+
+          </view>
+        </view>
+
+      </block>
+    </view>
+
+
+
+
+
+  </scroll-view>
+
+
+
+</view>

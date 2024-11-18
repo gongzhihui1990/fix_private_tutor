@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="head-container">
+  <scroll-view scroll-y='true'>
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <navigator class='row-navigator'>
+      <view>我的课程</view>
+      <image src='/images/arrow.png' style='height:32rpx;width:32rpx;'></image>
+    </navigator>
+    <view class='row-divider' style='margin-left:32rpx;'></view>
+    <navigator class='row-navigator' url='/pages/collection/teacher' >
+      <view>我的收藏</view>
+      <image src='/images/arrow.png' style='height:32rpx;width:32rpx;'></image>
+    </navigator>
+    <view class='row-divider' style='margin-left:32rpx;'></view>
+    <navigator class='row-navigator'>
+      <view>联系客服</view>
+      <image src='/images/arrow.png' style='height:32rpx;width:32rpx;'></image>
+    </navigator>
+    <view class='row-divider' style='margin-left:0rpx;'></view>
+
+  </scroll-view>
+
+</view>
